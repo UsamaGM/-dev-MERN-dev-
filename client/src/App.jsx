@@ -16,8 +16,7 @@ function App() {
       <Courses/>
       <ProgressBar />
       <SideBar/>
-      <Sidebar />
-      <Quiz />4cbcadb8da0249fceff0274d193dcda04e5f9be1
+      <Quiz />
     </>
   )
 }
