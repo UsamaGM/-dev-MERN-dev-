@@ -1,12 +1,16 @@
 import express from "express";
-import userRouter from "./routes/userRouter.js";
+import userRouter from "./routes/userRoute.js";
+import cors from "cors";
 
 const app = express();
 
-// app.get("/test", async function (req, res) {
-//   return res.json({ message: "Hello World" });
-// });
+app.use(cors());
 
+app.get("/test", async function (req, res) {
+  return res.json({ message: "Hello World" });
+});
+
+app.use("/auth", authRouter);
 app.use("/user", userRouter);
 
 app.listen(3000, () => {
