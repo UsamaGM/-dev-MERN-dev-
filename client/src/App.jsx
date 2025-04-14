@@ -3,7 +3,8 @@ import Header from './component/Header'
 import Courses from './component/Courses'
 import Card from './component/Card'
 import ProgressBar from './component/ProgressBar'
-import SideBar from './component/Sidebar'
+import Sidebar from './component/Sidebar'
+import Quiz from './component/Quiz'
 import Sidebar from './component/Sidebar'
 import Quiz from './component/Quiz'
 
@@ -13,9 +14,13 @@ function App() {
     <>
       <Header/>  
       <Card/>
+      <Courses/>   
+      <ProgressBar />
+      <Sidebar />
+      <Quiz />
       <Courses/>
       <ProgressBar />
-      <SideBar/>
+      <Sidebar />
       <Quiz />
     </>
   )

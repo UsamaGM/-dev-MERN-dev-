@@ -19,11 +19,6 @@ const classSchema = new Schema({
     ref: User,
     default: [],
   },
-  courses: {
-    type: [Schema.Types.ObjectId],
-    ref: Course,
-    default: [],
-  },
 });
 
 const Class = mongoose.Model("Class", classSchema);

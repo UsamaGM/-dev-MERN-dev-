@@ -1,5 +1,6 @@
 import React from "react";
 import { CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 
 const ProgressBar = ({ quizScore, presentationScore }) => {
   const percentage = Math.round((quizScore + presentationScore) / 2);
