@@ -13,15 +13,15 @@ import mongoose from "mongoose";
  */
 
 const UserSchema = new mongoose.Schema({
-  User: String,
-  Name: String,
-  Email: String,
-  Password: String,
-  Role: String,
-  Classes: [String],
-  Courses: [String],
-  Grades: [String],
-  UpcomingActivities: [String],
-  Quizzes: [String],
-  CGPA: Number,
+  userID: String,
+  name: String,
+  email: String,
+  password: String,
+  role: String,
+  classes: [String],
+  courses: [String],
+  grades: [String],
+  upcomingActivities: [String],
+  quizzes: [String],
+  cGPA: Number,
 });
