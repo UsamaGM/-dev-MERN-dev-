@@ -12,4 +12,16 @@ import mongoose from "mongoose";
  * Quizzes
  */
 
-const UserSchema = new mongoose.Schema({});
+const UserSchema = new mongoose.Schema({
+  User: String,
+  Name: String,
+  Email: String,
+  Password: String,
+  Role: String,
+  Classes: [String],
+  Courses: [String],
+  Grades: [String],
+  UpcomingActivities: [String],
+  Quizzes: [String],
+  CGPA: Number,
+});
