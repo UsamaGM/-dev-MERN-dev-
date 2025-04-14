@@ -1,10 +1,10 @@
 import pic from '../assets/images/pic2.png'
-function Courses() {
+function Courses({courses, quizzez, presentation, grades}) {
     return (
         <>
-            <div className="m-4  rounded-3xl p-4 bg-slate-100">
-                <p className="text-2xl font-medium mb-6 ">My Courses</p>
-                <div className="flex justify-between px-7">
+            <div className="m-4 rounded-3xl p-4 bg-slate-100">
+                <p className="text-2xl font-medium mb-6 px-7">My Courses</p>
+                <div className="grid grid-cols-2 px-7">
                     <div class="max-w-sm bg-amber-50 rounded-2xl overflow-hidden md:flex md:max-w-lg shadow-2xl">
                         <div>
                             <img class="h-40 md:w-lg object-cover" src={pic} />
@@ -14,7 +14,7 @@ function Courses() {
                             <p class="font-medium cursor-pointer mt-2">Department of Computer Science</p>
                         </div>
                     </div>
-                    <div class="max-w-sm bg-amber-50 rounded-2xl overflow-hidden md:flex md:max-w-lg">
+                    <div class="max-w-sm bg-amber-50 rounded-2xl overflow-hidden md:flex md:max-w-lg shadow-2xl">
                         <div>
                             <img class="h-40 md:w-lg object-cover" src={pic} />
                         </div>
