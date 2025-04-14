@@ -20,7 +20,7 @@ const Quiz = () => {
             <input type="radio" id="peshawar" name="capital" value="peshawar" />
             <label htmlFor="peshawar">Peshawar</label><br />
             </div>            
-          <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">Submit</button>
+          <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">Next</button>
         </div>
       </form>
     </div>

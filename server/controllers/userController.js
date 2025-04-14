@@ -8,7 +8,7 @@ import User from "../models/userModel.js";
 async function getUser(req, res) {
   if (req.params.id) {
     try {
-      const user = await User.find({ id: req.params.id });
+      const user = await User.find({ _id: req.params.id });
       if (!user) return res.status(404).json({ message: "User not found" });
       return res.status(200).json({ message: "User found.", data: user });
     } catch (error) {
