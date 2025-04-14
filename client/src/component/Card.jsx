@@ -1,6 +1,8 @@
 import quiz from '../assets/images/quiz.jpg'
 import courses from '../assets/images/courses.jpg'
-function Card() {
+import grade from '../assets/images/score.png'
+import presentaion from '../assets/images/presentation.png'
+function Card({course, quizzez, presentation, grades}) {
     return (
         <>
             <div className="m-4 rounded-3xl p-4 bg-slate-100 px-10 grid grid-cols-4 ">
@@ -26,17 +28,17 @@ function Card() {
                 </div>
                 <div class="bg-amber-50 rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between items-center mx-10">
                     <div className='p-4'>
-                        <img class=" object-cover" src={quiz} />
+                        <img class=" object-cover" src={grade} />
                     </div>
                     <div class="p-3 pb-5">
-                        <p class="font-semibold text-lg text-slate-700 uppercase">Enrolled Courses</p>
+                        <p class="font-semibold text-lg text-slate-700 uppercase">My Grades</p>
                         <p class="font-medium cursor-pointer mt-2">8</p>
                     </div>
 
                 </div>
                 <div class="bg-amber-50 rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between items-center mx-10">
                     <div className='p-4'>
-                        <img class=" object-cover" src={quiz} />
+                        <img class=" object-cover" src={presentaion} />
                     </div>
                     <div class="p-3 pb-5">
                         <p class="font-semibold text-lg text-slate-700 uppercase">My Presentations</p>

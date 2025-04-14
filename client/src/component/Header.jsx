@@ -6,7 +6,7 @@ function Header() {
         <>
             <div className="bg-white w-full p-5 flex justify-between">
                 <div>
-                    <p className="text-2xl font-medium ml-6">Hello newUser</p>
+                    <p className="text-2xl font-medium ml-6 cursor-pointer">Hello newUser</p>
                 </div>
                 <div className="relative">
                     <input className="md:block hidden border-1 border-slate-800 rounded-3xl p-2 py-3 w-90 pr-10" type="text" placeholder="Search Your Courses" />
@@ -14,8 +14,8 @@ function Header() {
                 </div>
 
                 <div className="bg-sky-700 px-6 py-2 text-white text-xl rounded-3xl w-40 flex justify-center items-center cursor-pointer hover:bg-sky-600 mr-6">
-                <img className="p-2" src={profileIcon} alt="Search Icon" />
-                   <p> username</p>
+                    <img className="p-2" src={profileIcon} alt="Search Icon" />
+                    <p> username</p>
                 </div>
             </div>
             <hr></hr>

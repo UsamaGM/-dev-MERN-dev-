@@ -1,5 +1,5 @@
 import pic from '../assets/images/pic2.png'
-function Courses({courses, quizzez, presentation, grades}) {
+function Courses() {
     return (
         <>
             <div className="m-4 rounded-3xl p-4 bg-slate-100">
@@ -12,6 +12,7 @@ function Courses({courses, quizzez, presentation, grades}) {
                         <div class="p-6 w-lg">
                             <p class="font-semibold text-lg text-slate-700 uppercase">Web Development</p>
                             <p class="font-medium cursor-pointer mt-2">Department of Computer Science</p>
+                            <p class="font-medium cursor-pointer mt-2">5/10</p>
                         </div>
                     </div>
                     <div class="max-w-sm bg-amber-50 rounded-2xl overflow-hidden md:flex md:max-w-lg shadow-2xl">
@@ -21,6 +22,7 @@ function Courses({courses, quizzez, presentation, grades}) {
                         <div class="p-4 w-lg">
                             <p class="font-semibold text-lg text-slate-700 uppercase">Web Development</p>
                             <p class="font-medium cursor-pointer mt-2">Department of Computer Science</p>
+                            <p class="font-medium cursor-pointer mt-2">5/10</p>
                         </div>
                     </div>
                 </div>
