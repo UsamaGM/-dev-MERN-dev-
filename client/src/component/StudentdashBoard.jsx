@@ -4,6 +4,7 @@ import Card from './Card'
 import ProgressBar from './ProgressBar'
 import Sidebar from './Sidebar'
 import RightSideBar from './RightSideBar'
+import CreateButtons from "./CreateButtons.jsx";
 
 function StudentDashBoard() {
     return (
@@ -17,6 +18,7 @@ function StudentDashBoard() {
                     <div className='flex'>
                         <div>
                             <Card />
+                            <CreateButtons />
                             <Courses />
                         </div>
                         <div>
