@@ -8,7 +8,7 @@ function Grades() {
                 <div>
                     <SideBar />
                 </div>
-                <div>
+                <div className="flex justify-center items-center w-full">
                     <ProgressBar/>
                 </div>
             </div>
