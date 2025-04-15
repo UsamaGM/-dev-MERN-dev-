@@ -1,4 +1,5 @@
 import User from "../models/userModel.js";
+import Class from "../models/classModel.js";
 
 /**getUser - get User by providing Id
  * @param {Object} req - The request object
@@ -45,4 +46,17 @@ async function createUser(req, res) {
   }
 }
 
-export { getUser, createUser };
+async function getUserData(req, res) {
+  const id = req.user._id;
+
+  if (!id) {
+    return res.status(400).json({ message: "Bad request" });
+  }
+
+  try {
+    const userResponse = await User.findById(id);
+    const classes = await Class.find({ students: id });
+  } catch (error) {}
+}
+
+export { getUser, createUser, getUserData };

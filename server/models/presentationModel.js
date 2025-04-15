@@ -1,5 +1,4 @@
 import { Schema } from "mongoose";
-import User from "./userModel";
 
 const presentationSchema = new Schema({
   title: {
@@ -9,9 +8,9 @@ const presentationSchema = new Schema({
   description: {
     type: String,
   },
-  course: {
+  class: {
     type: Schema.Types.ObjectId,
-    ref: Course,
+    ref: "Class",
     required: true,
   },
   grade: {
@@ -19,7 +18,12 @@ const presentationSchema = new Schema({
   },
   peersGrade: {
     type: [
-      { peerId: { type: Schema.Types.ObjectId, ref: User }, grade: Number },
+      {
+        type: {
+          peerId: { type: Schema.Types.ObjectId, ref: "User" },
+          grade: Number,
+        },
+      },
     ],
   },
 });

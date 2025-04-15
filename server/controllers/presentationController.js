@@ -1,5 +1,4 @@
 import Presentation from "../models/presentationModel.js";
-import Quiz from "../models/quizModel.js";
 
 async function getPresentationById(req, res) {
   const { id } = req.params;
@@ -54,4 +53,9 @@ async function getClassPresentations(req, res) {
 }
 async function deletePresentation(req, res) {}
 
-export { getPresentationById, createNewPresentation, deletePresentation, getClassPresentations };
+export {
+  getPresentationById,
+  createNewPresentation,
+  deletePresentation,
+  getClassPresentations,
+};

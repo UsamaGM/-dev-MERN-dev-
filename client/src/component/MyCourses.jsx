@@ -1,4 +1,11 @@
 import Courses from "./Courses"
+<<<<<<< HEAD
+
+function MyCourses(){
+    return(
+        <>
+            <Courses/>
+=======
 import Sidebar from './Sidebar'
 
 function MyCourses() {
@@ -12,6 +19,7 @@ function MyCourses() {
                     <Courses />
                 </div>
             </div>
+>>>>>>> 4e2ba8c1f747a4c4f2c880703452c752242ff1dd
         </>
     )
 }

@@ -15,18 +15,18 @@ function StudentDashBoard() {
                 <div >
                     <Header />
                     <div className='flex'>
-                    <div>
-                        <Card />
-                        <Courses />
-                    </div>
-                    <div>
-                        <RightSideBar />
-                    </div>
+                        <div>
+                            <Card />
+                            <Courses />
+                        </div>
+                        <div>
+                            <RightSideBar />
+                        </div>
                     </div>
                 </div>
-
             </div>
         </>
     )
-}
-export default StudentDashBoard
+    }
+
+export default StudentDashBoard;
