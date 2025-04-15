@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-import MyCourses from './component/MyCourses';
-import Quiz from './component/Quiz';
+import MyCourses from './component/MyCourses'
 import StudentDashBoard from './component/StudentdashBoard';
-import TeacherDashboard from './component/TeacherDashboard/TeacherDashboard';
 import Presentation from './component/Presentation';
 import Quiz from './component/Quiz'
 import Quizzes from './component/Quizzes';
