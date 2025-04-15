@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import User from "./userModel.js";
 const { Schema } = mongoose;
 
 const classSchema = new Schema({
@@ -10,13 +9,13 @@ const classSchema = new Schema({
   }, // String is shorthand for {type: String}
   teacher: {
     type: Schema.Types.ObjectId,
-    ref: User,
+    ref: "User",
     requried: true,
     trim: true,
   },
   students: {
     type: [Schema.Types.ObjectId],
-    ref: User,
+    ref: "User",
     default: [],
   },
 });

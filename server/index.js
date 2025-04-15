@@ -17,7 +17,7 @@ app.get("/test", async function (req, res) {
 
 app.use("/auth", authRouter);
 app.use("/user", userRouter);
-app.use("/class", protect, classRouter);
+app.use("/class", classRouter);
 
 await connectDB();
 
