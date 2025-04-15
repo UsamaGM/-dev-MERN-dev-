@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import User from "./userModel";
+import User from "./userModel.js";
 const { Schema } = mongoose;
 
 const classSchema = new Schema({
@@ -21,6 +21,6 @@ const classSchema = new Schema({
   },
 });
 
-const Class = mongoose.Model("Class", classSchema);
+const Class = mongoose.model("Class", classSchema);
 
 export default Class;

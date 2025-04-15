@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import bcrypt from "bcrypt";
 
 /**User
  * Name
@@ -35,15 +36,15 @@ const UserSchema = new mongoose.Schema({
   },
   classes: {
     type: [mongoose.Schema.Types.ObjectId],
-    ref: Class,
-  },
-  courses: {
-    type: [Course],
+    ref: "Class",
   },
   grades: {
-    type: {
-      type: ["quizz", "presentation"],
-    },
+    type: [
+      {
+        type: String,
+        enum: ["quizz", "presentation"],
+      },
+    ],
   },
   isVerified: {
     type: Boolean,
