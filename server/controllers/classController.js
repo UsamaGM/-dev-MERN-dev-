@@ -8,7 +8,7 @@ async function getClassById(req, res) {
   }
 
   try {
-    const classResponse = await Class.find({ _id: id });
+    const classResponse = await Class.findById(id);
     if (!classResponse) {
       return res.status(404).json({ message: "Class not found" });
     }
@@ -21,14 +21,13 @@ async function getClassById(req, res) {
 }
 
 async function createNewClass(req, res) {
-  const { name, techer, students, courses } = req.body;
+  const { name, techer, students } = req.body;
 
   try {
     const classResponse = await Class.create({
       name,
       techer,
       students,
-      courses,
     });
 
     return res
