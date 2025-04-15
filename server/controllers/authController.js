@@ -1,8 +1,8 @@
 import jwt from "jsonwebtoken";
-import User from "../models/User";
 import crypto from "crypto";
 import dotenv from "dotenv";
-import { sendEmail } from "../services/emailService";
+import User from "../models/userModel.js";
+import { sendEmail } from "../services/emailService.js";
 
 dotenv.config();
 
