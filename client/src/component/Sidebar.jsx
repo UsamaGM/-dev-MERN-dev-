@@ -24,7 +24,7 @@ function SideBar() {
     return (
         <>
             <div className="bg-sky-700 flex flex-col min-h-full w-55 py-4 pr-4 pl-3 text-white line text-lg/6 ">
-                <div className='text-4xl mb-10 mt-5 font-medium'>VirtualClass</div>
+                <div className='text-4xl mb-10 mt-5 font-medium'>Virtual Class</div>
                 <div className='flex justify-start items-center p-2 hover:bg-sky-600 hover:rounded-xl cursor-pointer mb-3'>
                     <img className='w-5 h-5 mx-2' src={home}></img>
                     <Link to='/studentDashBoard' className="">Home</Link>
