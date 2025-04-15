@@ -48,7 +48,7 @@ function SideBar() {
                 <br></br><br></br><hr></hr>
                 <div className='flex justify-start items-center p-2 hover:bg-sky-600 hover:rounded-xl cursor-pointer mb-3 mt-3'>
                     <img className='w-5 h-5 mx-2' src={profile}></img>
-                    <a className="">MyProfile</a>
+                    <Link to='/profile' className="">MyProfile</Link>
                 </div>
                 <div className='flex justify-start items-center p-2 hover:bg-sky-600 hover:rounded-xl cursor-pointer'>
                     <img className='w-5 h-5 mx-2' src={logout}></img>

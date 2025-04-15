@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import searchLogo from '../assets/images/searchLogo.png';
+import searchLogo from '../assets/images/SearchLogo.png';
 import profileIcon from '../assets/images/LoginLogo.png';
 import logout from '../assets/images/blackLogout.png'
 import profile from '../assets/images/blackProfile.png'
