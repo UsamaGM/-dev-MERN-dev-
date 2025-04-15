@@ -27,7 +27,7 @@ function SideBar() {
                 <div className='text-4xl mb-10 mt-5 font-medium'>VirtualClass</div>
                 <div className='flex justify-start items-center p-2 hover:bg-sky-600 hover:rounded-xl cursor-pointer mb-3'>
                     <img className='w-5 h-5 mx-2' src={home}></img>
-                    <Link to='/' className="">Home</Link>
+                    <Link to='/studentDashBoard' className="">Home</Link>
                 </div>
                 <div className='flex justify-start items-center p-2 hover:bg-sky-600 hover:rounded-xl cursor-pointer mb-3'>
                     <img className='w-5 h-5 mx-2' src={mycourses}></img>
