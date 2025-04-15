@@ -1,21 +1,20 @@
 import SideBar from "./Sidebar"
-import icon from '../assets/images/blackProfile.png'
+import icon from '../assets/images/blackLogoIcon.webp'
 
 function Profile() {
     return (
-        <div className="flex h-screen">
+        <div className="flex h-screen w-full bg-slate-200">
             <SideBar/>
-            <div className="px-13"> 
-
-                <h1 className="text-2xl font-medium mb-6 mt-15">My Profile</h1>
-                <div className="flex">
+            <div className="px-13 rounded-3xl p-4 bg-white pb-10 m-15"> 
+                <h1 className="text-4xl font-medium mb-6 mt-15 px-9">My Profile</h1>
+                <div className="flex w-full">
                      
-                    <div >
-                        <h2>Sarah Shaikh</h2>  
-                        <p>xyz@gmail.com</p>  
-                        <p>0323****123</p>  
+                    <div className="text-xl font-base mb-6 mt-3 text-slate-600">
+                        <h2 className="py-6 px-10">FullName: Sarah Shaikh</h2>  
+                        <p className="py-6 px-10">Email: xyz@gmail.com</p>  
+                        <p className="py-6 px-10">Role: Teacher</p>  
                     </div>
-                    <img className="w-30 h-30" src={icon} />
+                    <img className="w-70 h-70 ml-60" src={icon} />
                 </div>
                 <br /><br />
             </div>

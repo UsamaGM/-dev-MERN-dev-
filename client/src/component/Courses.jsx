@@ -4,13 +4,13 @@ function Courses() {
 
     return (
         <>
-            <div className={`mx-2 rounded-3xl p-4 bg-slate-100 pb-10 overflow-y-auto ${window.location.pathname === '/myCourses' ? 'h-[500px]' : 'h-[252px]'}`}>
+            <div className={`p-4 bg-slate-100 pb-10 overflow-y-auto ${window.location.pathname === '/myCourses' ? 'h-[500px]' : 'h-[252px]'}`}>
                 <p className="text-2xl font-medium mb-6 px-13">My Courses</p>
                 <div className="grid grid-cols-2 px-7">
                     {courses.map(course => (
                         <div class="max-w-sm bg-amber-50 rounded-2xl overflow-hidden md:flex md:max-w-lg shadow-2xl mx-5 mb-5">
                         <div>
-                            <img class="h-40 md:w-lg object-cover" src={pic} />
+                            <img className="h-40 md:w-lg object-cover" src={pic} />
                         </div>
                         <div class="p-4 w-lg">
                             <p class="font-semibold text-sm text-slate-700 uppercase">{course.title}</p>

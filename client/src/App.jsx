@@ -12,7 +12,6 @@ import Profile from './component/Profile';
 function App() {
   return (
     <>
-      
       <Routes>
         <Route path='/' element={<Login />}></Route>
         <Route path='/studentDashBoard' element={<StudentDashBoard />}></Route>
@@ -22,9 +21,8 @@ function App() {
         <Route path='/grades' element={<Grades />}></Route>
         <Route path="/signup" element={<SignUp />} />
         <Route path='/login' element={<Login />}></Route>
+        <Route path='/profile' element={<Profile/>}></Route>
       </Routes>
-      {/* <Quiz /> */}
-      {/* <Profile /> */}
     </>
   );
 }
