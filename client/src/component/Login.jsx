@@ -92,7 +92,6 @@ const Login = () => {
                 <p className='text-sky-700 mb-4 text-sm font-medium cursor-pointer' onClick={handleSignInClick}>Create a New Account?</p>
             </div>
         </div>
-
     )
 }
 
