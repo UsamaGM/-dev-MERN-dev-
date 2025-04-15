@@ -6,7 +6,6 @@ function Courses() {
                 <p className="text-2xl font-medium mb-6 px-13">My Courses</p>
                 <div className="grid grid-cols-2 px-7">
                     <div class="max-w-sm bg-amber-50 rounded-2xl overflow-hidden md:flex md:max-w-lg shadow-2xl mx-5 mb-5">
-
                         <div>
                             <img class="h-40 md:w-lg object-cover" src={pic} />
                         </div>
@@ -65,4 +64,4 @@ function Courses() {
         </>
     )
 }
-export default Courses;
+export default Courses

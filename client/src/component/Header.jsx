@@ -1,4 +1,8 @@
-
+import { useState } from 'react';
+import searchLogo from '../assets/images/searchLogo.png';
+import profileIcon from '../assets/images/LoginLogo.png';
+import logout from '../assets/images/blackLogout.png'
+import profile from '../assets/images/blackProfile.png'
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
@@ -17,10 +21,9 @@ function Header() {
 
     return (
         <>
-
-            <div className="bg-white w-full p-2 flex justify-between">
+            <div className="bg-white w-full p-2 flex justify-between pb-3 pt-3">
                 <div>
-                    <p className="text-2xl font-medium ml-2 cursor-pointer">Hello newUser</p>
+                    <p className="text-2xl font-medium ml-2">Hello newUser</p>
                 </div>
                 <div className="relative">
                     <input

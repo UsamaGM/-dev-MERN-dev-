@@ -92,6 +92,31 @@ function SignUp() {
         }
     }
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        // send from data to server
+        const response = await fetch('/auth/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: fulname,
+                email,
+                password,
+                role
+            }),
+        });
+        const data = await response.json();
+        if (response.ok) {
+            console.log("Signup successful:", data);
+            navigate('/studentDashBoard');
+        } else {
+            console.error("Signup failed:", data);
+        }
+    }
+
     return (
         <>
             <div className="flex justify-center items-center h-screen bg-sky-700">
@@ -100,22 +125,24 @@ function SignUp() {
                     <div className="inline-block border-[1px] justify-center w-60 border-sky-700 border-solid"></div>
                     <h3 className='text-xl font-semibold text-sky-700 pt-2'>Create Account!</h3>
                     {/* Inputs */}
-                    <div className='flex flex-col items-center justify-center mt-2'>
-                        <input type="password" className='rounded-2xl px-2 py-1 w-4/5 md:w-full border-[1px] border-sky-700 m-1 focus:shadow-md focus:border-sky-600 focus:outline-none focus:ring-0' placeholder='Name' value={formData.fulname} name='fulname' onChange={handleChange}></input>
-                        {errors.fulname && <p style={{ color: 'red' }}>{errors.fulname}</p>}
-                        <input type='email' className='rounded-2xl px-2 py-1 w-4/5 md:w-full border-[1px] border-sky-700 m-1 focus:shadow-md focus:border-sky-600 focus:outline-none focus:ring-0' placeholder='Email' value={formData.email} name='email' onChange={handleChange}></input>
-                        {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
-                        <input type="password" className='rounded-2xl px-2 py-1 w-4/5 md:w-full border-[1px] border-sky-700 m-1 focus:shadow-md focus:border-sky-600 focus:outline-none focus:ring-0' placeholder='Password' value={formData.password} name='password' onChange={handleChange}></input>
-                        {errors.password && <p style={{ color: 'red' }}>{errors.email}</p>}
-                        <div className='text-sky-700 m-2 text-lg'>
-                            <label className='mr-5'>Role</label>
-                            Student<input className='mr-5' type="radio" value={'student'} name="role" checked={formData.role === 'student'}></input>
-                            Teacher<input type="radio" value={'teacher'} name="role" checked={formData.role === 'teacher'}></input>
+                    <form onSubmit={handleSubmit}>
+                        <div className='flex flex-col items-center justify-center mt-2'>
+                            <input type="password" className='rounded-2xl px-2 py-1 w-4/5 md:w-full border-[1px] border-sky-700 m-1 focus:shadow-md focus:border-sky-600 focus:outline-none focus:ring-0' placeholder='Name' value={formData.fulname} name='fulname' onChange={handleChange}></input>
+                            {errors.fulname && <p style={{ color: 'red' }}>{errors.fulname}</p>}
+                            <input type='email' className='rounded-2xl px-2 py-1 w-4/5 md:w-full border-[1px] border-sky-700 m-1 focus:shadow-md focus:border-sky-600 focus:outline-none focus:ring-0' placeholder='Email' value={formData.email} name='email' onChange={handleChange}></input>
+                            {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
+                            <input type="password" className='rounded-2xl px-2 py-1 w-4/5 md:w-full border-[1px] border-sky-700 m-1 focus:shadow-md focus:border-sky-600 focus:outline-none focus:ring-0' placeholder='Password' value={formData.password} name='password' onChange={handleChange}></input>
+                            {errors.password && <p style={{ color: 'red' }}>{errors.password}</p>}
+                            <div className='text-sky-700 m-2 text-lg'>
+                                <label className='mr-5'>Role</label>
+                                Student<input className='mr-5' type="radio" value={'student'} name="role" checked={formData.role === 'student'}></input>
+                                Teacher<input type="radio" value={'teacher'} name="role" checked={formData.role === 'teacher'}></input>
+                            </div>
+                            <button className='rounded-3xl m-1 text-white bg-sky-700 px-4 py-2 shadow-md hover:bg-sky-600 transition duration-200 ease-in w-65 text-lg' onClick={handleClick} type='submit'>
+                                Sign Up
+                            </button>
                         </div>
-                        <button className='rounded-3xl m-1 text-white bg-sky-700 px-4 py-2 shadow-md hover:bg-sky-600 transition duration-200 ease-in w-65 text-lg' onClick={handleClick}>
-                            Sign Up
-                        </button>
-                    </div>
+                    </form>
                     <p className='text-sky-700 mt-4 text-sm'>Already have an account?</p>
                     <p className='text-sky-700 mb-4 text-sm font-medium cursor-pointer' onClick={navigateToLogin}>Sign In to your Account?</p>
                 </div>

@@ -1,5 +1,5 @@
-import Courses from "./Courses";
-import Sidebar from './Sidebar';
+import Courses from "./Courses"
+import Sidebar from './Sidebar'
 
 function MyCourses() {
     return (
