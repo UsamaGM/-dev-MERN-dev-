@@ -4,7 +4,6 @@ import classRouter from "./routes/classRoute.js";
 import authRouter from "./routes/authRoute.js";
 import cors from "cors";
 import connectDB from "./config/db.js";
-import { protect } from "./middleware/authMiddleware.js";
 
 const app = express();
 
