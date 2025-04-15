@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import MyCourses from './component/MyCourses';
 import Presentation from './component/Presentation';
-import Quiz from './component/Quiz'
 import Quizzes from './component/Quizzes';
 import StudentDashBoard from './component/StudentdashBoard'
 import Grades from './component/Grades'
