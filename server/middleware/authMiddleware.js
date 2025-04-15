@@ -35,18 +35,6 @@ async function protect(req, res, next) {
   }
 }
 
-function authorizeRoles(roles) {
-  (req, res, next) => {
-    if (!req.user) {
-      res.status(401).json({ message: "Not authorized, user not found" });
-    }
-    if (!roles.includes(req.user.role)) {
-      res.status(403).json({ message: "Forbidden, insufficient privileges." });
-    }
-    next();
-  };
-}
-
 function authorizeAdmin(req, res, next) {
   if (req.user.role !== "teacher") {
     res.status(403).send({ error: "Unauthorized" });
@@ -54,4 +42,4 @@ function authorizeAdmin(req, res, next) {
   next();
 }
 
-export { protect, authorizeRoles, authorizeAdmin };
+export { protect, authorizeAdmin };

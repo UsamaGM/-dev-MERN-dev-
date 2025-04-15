@@ -23,3 +23,7 @@ const presentationSchema = new Schema({
     ],
   },
 });
+
+const Presentation = mongoose.model("Presentation", presentationSchema);
+
+export default Presentation;

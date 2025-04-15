@@ -28,11 +28,17 @@ async function createUser(req, res) {
   const { name, email, password, role } = req.body;
 
   try {
+    const existingUser = await User.find({ email });
+
+    if (existingUser)
+      return res.status(400).json({ message: "User already exists" });
+
     const newUser = await User.create({ name, email, password, role });
     return res
       .status(200)
       .json({ message: "Successfully created User!", data: newUser });
   } catch (error) {
+    console.error(error);
     return res
       .status(500)
       .json({ message: "Server Error! Failed to create new User" });

@@ -3,25 +3,46 @@ import searchLogo from '../assets/images/searchLogo.png';
 import profileIcon from '../assets/images/LoginLogo.png';
 import logout from '../assets/images/blackLogout.png'
 import profile from '../assets/images/blackProfile.png'
+<<<<<<< HEAD
 
 function Header() {
     const [showDropdown, setShowDropdown] = useState(false);
 
     const toggleDropdown = () => setShowDropdown(!showDropdown);
+=======
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+function Header() {
+    const [showDropdown, setShowDropdown] = useState(false);
+    const toggleDropdown = () => setShowDropdown(!showDropdown);
+    const navigate = useNavigate();
+>>>>>>> 4e2ba8c1f747a4c4f2c880703452c752242ff1dd
 
     const handleLogout = () => {
         const confirmLogout = window.confirm('Are you sure you want to logout?');
         if (confirmLogout) {
+<<<<<<< HEAD
             console.log('Logged out');
             setShowDropdown(false);
+=======
+            setShowDropdown(false);
+            navigate('/')
+>>>>>>> 4e2ba8c1f747a4c4f2c880703452c752242ff1dd
         }
     };
 
     return (
         <>
+<<<<<<< HEAD
             <div className="bg-white w-full p-2 flex justify-between">
                 <div>
                     <p className="text-2xl font-medium ml-2 cursor-pointer">Hello newUser</p>
+=======
+            <div className="bg-white w-full p-2 flex justify-between pb-3 pt-3">
+                <div>
+                    <p className="text-2xl font-medium ml-2">Hello newUser</p>
+>>>>>>> 4e2ba8c1f747a4c4f2c880703452c752242ff1dd
                 </div>
                 <div className="relative">
                     <input

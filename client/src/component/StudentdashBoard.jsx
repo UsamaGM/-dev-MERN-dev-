@@ -12,6 +12,7 @@ function StudentDashBoard() {
                 <div>
                     <Sidebar />
                 </div>
+<<<<<<< HEAD
                 <div>
                     <Header />
                     <Card />
@@ -20,6 +21,21 @@ function StudentDashBoard() {
                 <div>
                     <RightSideBar />
                 </div>
+=======
+                <div >
+                    <Header />
+                    <div className='flex'>
+                    <div>
+                        <Card />
+                        <Courses />
+                    </div>
+                    <div>
+                        <RightSideBar />
+                    </div>
+                    </div>
+                </div>
+
+>>>>>>> 4e2ba8c1f747a4c4f2c880703452c752242ff1dd
             </div>
         </>
     )
